@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 function injectScript(url){
 	var inspectorScript = document.createElement('script');
 	inspectorScript.type = 'text/javascript';
-	inspectorScript.src = chrome.extension.getURL('inject/inspectscope.'+url);
+	inspectorScript.src = chrome.extension.getURL('inject/'+url);
 	document.head.appendChild(inspectorScript);
 }
 
