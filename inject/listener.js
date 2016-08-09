@@ -2,13 +2,7 @@
 (function(window) {
 /* jshint strict: false */
 
-
 function bootstrap() {
-    if (window.iframe) {
-        iframe.addEventListener('load', function(){
-            bootstrap();
-        });
-    }
     var element = null;
     var doc = document;
     var win = window;
@@ -28,13 +22,17 @@ function bootstrap() {
 			console.error('Cannot inspect scope, angular is undefined')
 			return
 		}
-
         console.log(win.angular.element(element).scope())
     });
-
+    hasBootStrap = true;
 }
 
-if (document.readyState === 'complete') {
+if (window.iframe) {
+    iframe.addEventListener('load', function(){
+        bootstrap(true);
+    });
+    return;
+} else if (document.readyState === 'complete') {
     bootstrap();
 } else {
     window.addEventListener('load', bootstrap);
