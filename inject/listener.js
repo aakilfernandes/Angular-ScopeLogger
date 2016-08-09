@@ -31,7 +31,6 @@ if (window.iframe) {
     iframe.addEventListener('load', function(){
         bootstrap(true);
     });
-    return;
 } else if (document.readyState === 'complete') {
     bootstrap();
 } else {
