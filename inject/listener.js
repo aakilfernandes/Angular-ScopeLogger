@@ -8,10 +8,7 @@ function bootstrap() {
 	var element = null
 
 	document.addEventListener("mousedown", function(event){
-	    if(event.button == 2)
-		    element = event.target;
-		else
-			element = null
+		element = event.target;
 	}, true);
 
 	document.addEventListener('inspectscope',function(){
