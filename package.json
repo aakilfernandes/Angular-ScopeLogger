@@ -1,0 +1,19 @@
+{
+  "name": "angular-scopelogger",
+  "version": "1.0.1",
+  "description": "A chrome extension for logging scopes to the console",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aakilfernandes/Angular-ScopeLogger.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aakilfernandes/Angular-ScopeLogger/issues"
+  },
+  "homepage": "https://github.com/aakilfernandes/Angular-ScopeLogger#readme"
+}
